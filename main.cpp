@@ -48,7 +48,7 @@ Student* constructStudent() {
 
 // Print a single student!
 void printStudent(const Student &stu) {
-	printf("%7i %*s %*s %f\n", stu.id, 
+	printf("%7i %*s %*s %.2f\n", stu.id, 
 	Student::NAMESIZE, stu.firstName, 
 	Student::NAMESIZE,  stu.lastName, 
 	stu.gpa);
@@ -167,9 +167,9 @@ int main() {
 			sum.n = 0;
 			sum.gpa = 0.0f;
 			sumStudents(sum, head);
-			printf("Total Students: %u\nTotal GPA: %f\n", sum.n, sum.gpa);
+			printf("Total Students: %u\nTotal GPA: %.2f\n", sum.n, sum.gpa);
 			float avg = sum.gpa / sum.n;
-			if (sum.n > 0) printf("\nAverage GPA: %f\n", avg);
+			if (sum.n > 0) printf("\nAverage GPA: %.2f\n", avg);
 		}
 		else if (strcmp(cmd,"HELP") == 0) {
 			printf("%s\n",helpstr);
